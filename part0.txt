@@ -1,0 +1,41 @@
+Exercise 0.4
+browser->server: HTTP POST sends the new note
+server->browser: Petition of redirection
+browser->server: Requests the page again
+
+
+Exercise 0.5
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "Viva la vida", date: "2021-09-22" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+Exercise 0.6
+
+
+note over browser:
+the user sends the note
+end note
+
+note over browser:
+browser changes the data of the notes
+end note
+
+browser->server: HTTP  POST the new note
