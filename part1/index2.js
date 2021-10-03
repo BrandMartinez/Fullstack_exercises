@@ -22,12 +22,7 @@ const Statistics = props => {
   {
     return(
       <div>
-        <Display text="good" value={props.good}></Display>
-        <Display text="neutral" value={props.neutral}></Display>
-        <Display text="bad" value={props.bad}></Display>
-        <Display text="all" value={props.good + props.neutral + props.bad}></Display>
-        <Display text="average" value={0}></Display>
-        <Display text="positive" value={0} aftertext="%"></Display>
+        <p>No feedback given</p>
       </div>
     )
   }
