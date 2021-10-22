@@ -5,17 +5,14 @@ import Part from './Part';
 
 const Course = ({ course }) => {
 
-    const list = []
-
     const sum = course.parts.reduce((acc,item) => {
-      list.push(<Part part={item} key={item.id} />)
       return acc += item.exercises
     },0 )
 
     return (
       <div>
         <Header course={course} />
-        {list}
+        {course.parts.map(element => <Part part={element} key={element.id} />)}
         <p><b>Total number of exercises {sum}</b></p>
       </div>
     )
