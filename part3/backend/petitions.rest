@@ -1,0 +1,24 @@
+DELETE http://localhost:3001/api/persons/626a8
+
+
+###
+
+GET http://localhost:3001/api/persons/ 
+
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "name": "Pot",
+    "number": "5645555664"
+}
+
+###
+PUT http://localhost:3001/api/persons/626a7f04eed006481a34c6d3
+Content-Type: application/json
+
+{
+    "name": "Big Potato",
+    "number": "646456456"
+}
